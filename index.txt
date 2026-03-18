@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grupo OF Vigilância - Soluções em segurança patrimonial e serviços corporativos.">
+    <meta name="keywords" content="segurança patrimonial, vigilância, portaria, segurança corporativa">
+    <meta name="author" content="Grupo OF Vigilância">
+    <title>Grupo OF Vigilância</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================= HEADER FIXO ================= -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <!-- LOGO (SUBSTITUIR POSTERIORMENTE) -->
+                <img src="hub_de_imagens/logo.png" alt="Grupo OF Vigilância">
+                <span style="margin-left:10px; font-weight:600;">
+                    GRUPO OF VIGILÂNCIA, Bem vindo!
+                </span>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#empresa">Empresa</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#segmentos">Segmentos</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= FULL BANNER ================= -->
+    <section class="banner">
+        <img src="hub_de_imagens/Banner_Principal.png" alt="Banner Principal">
+    </section>
+
+     <!-- ================= EMPRESA ================= -->
+    <section id="empresa" class="section">
+        <div class="container">
+            <h2>Empresa</h2>
+            <div class="content">
+                <p>
+                   O Grupo OF Vigilância atua há mais de 20 anos no mercado, oferecendo soluções completas em segurança patrimonial, controle de acesso
+                </p>
+                <p>
+                     e monitoramento corporativo. Nossa equipe é altamente treinada, comprometida com excelência operacional e atendimento personalizado.
+                </p>   
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section id="servicos" class="section bg-light">
+        <div class="container">
+            <h2>Serviços</h2>
+            <div class="content">
+                <p>
+                   Temos um portifólio de excelência no segmento de segurança privada, oferecendo soluções estratégicas e personalizadas para proteção patrimonial 
+                </p>
+                <p>
+                    e controle de acesso. Possuimos sólida experiência na atuação em grandes eventos, garantindo organização, prevenção de riscos e resposta eficiente
+               </p>
+               <p>
+                    em ambientes de alta complexidade. Com décadas de mercado, é reconhecida pela confiabilidade, profissionalismo e compromisso contínuo com a 
+               </p>
+               <p>
+                    segurança de seus clientes.
+               </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEGMENTOS ================= -->
+    <section id="segmentos" class="section">
+        <div class="container">
+            <h2>Segmentos</h2>
+
+            <div class="grid-segmentos">
+                <div class="card">
+                    <img src="hub_de_imagens/Figura1.JPG" alt="Segurança Patrimonial">
+                    <h3>Segurança Patrimonial</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura2.JPG" alt="Condomínios">
+                    <h3>Condomínios</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura3.JPG" alt="Shopping e Varejo">
+                    <h3>Shopping e Varejo</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura4.JPG" alt="Indústria">
+                    <h3>Indústria</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura5.JPG" alt="Portos">
+                    <h3>Portos</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura6.JPG" alt="Transportes e Logística">
+                    <h3>Transportes e Logística</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura7.JPG" alt="Saúde">
+                    <h3>Saúde</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura8.JPG" alt="Educação">
+                    <h3>Educação</h3>
+                </div>
+
+                <div class="card">
+                    <img src="hub_de_imagens/Figura9.JPG" alt="Grandes Eventos">
+                    <h3>Grandes Eventos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTATOS / FOOTER ================= -->
+    <footer id="contatos" class="footer">
+        <div class="container footer-content">
+            <hr>
+            <img src="hub_de_imagens/logo.png" alt="Grupo OS Vigilância">
+            <p><strong>Grupo OF Vigilância</strong></p>
+            <p> Rua Maria da Glória Baltar, 23 - Nilópolis - Telefone: 21-2692-6852</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>
