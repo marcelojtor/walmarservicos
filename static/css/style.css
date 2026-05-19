@@ -1,0 +1,281 @@
+/* ================= RESET & BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff url('../hub_de_imagens_2/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #444; 
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= HEADER & NAV ================= */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img { height: 85px; }
+.logo span { font-weight: 600; font-size: 16px; color: #111; }
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover { opacity: 0.6; }
+.menu-toggle { display: none; font-size: 26px; cursor: pointer; }
+
+/* ================= BANNER PRINCIPAL ================= */
+.banner { margin-top: 85px; width: 100%; }
+.banner img { width: 100%; display: block; }
+
+/* ================= SEÇÕES ================= */
+.section {
+    padding: 40px 0; 
+    transition: all 0.8s ease;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.bg-light { background: rgba(247, 247, 247, 0.92); }
+
+.section h2 { 
+    text-align: center; 
+    margin-bottom: 25px; 
+    font-weight: 700;    
+    color: #a68210;     
+    font-size: 32px;
+}
+
+#empresa p {
+    max-width: 750px;
+    margin: 0 auto 15px auto;
+    text-align: center;
+}
+
+/* ================= GRID SEGMENTOS ================= */
+.grid-segmentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #444;
+    border-radius: 6px;
+}
+
+.card img { width: 70px; margin-bottom: 15px; }
+.card h3 { color: #111; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
+/* ================= DETALHAMENTO (ZIG-ZAG) ================= */
+.segmento-detalhe { border-top: 1px solid #eee; }
+
+.detalhe-box {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+}
+
+@media (min-width: 769px) {
+    .detalhe-box.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.detalhe-box img {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.detalhe-box h3 { 
+    margin-bottom: 8px; 
+    color: #a68210; 
+    font-weight: 700; 
+    font-size: 28px;
+}
+
+.detalhe-box p { max-width: 700px; }
+
+/* ================= EFEITO CORPORATIVO BANNER SEGMENTOS ================= */
+
+.banner-segmentos {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Altura fixa para permitir o zoom interno */
+    overflow: hidden;
+    background-color: #000;
+    margin-bottom: 15px;
+}
+
+.banner-segmentos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    display: block;
+    filter: brightness(0.9) contrast(1.1); 
+    will-change: transform;
+}
+
+/* Ativa a animação APENAS no Desktop e acelerado para 10s */
+@media (min-width: 769px) {
+    .banner-segmentos img {
+        animation: zoomLento 10s infinite alternate ease-in-out;
+    }
+}
+
+/* Overlay Dourado/Escuro */
+.banner-segmentos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(166, 130, 16, 0.2) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes zoomLento {
+    from { transform: scale(1); }
+    to { transform: scale(1.15); }
+}
+
+/* ================= COMPONENTES EXTRAS ================= */
+.hidden { opacity: 0; transform: translateY(40px); }
+.visible { opacity: 1; transform: translateY(0); }
+
+.botao-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    padding: 60px 0;
+    background: #000000;
+    color: #ffffff;
+    border-top: 1px solid #333;
+}
+
+.footer img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-col p { font-size: 14px; color: #ccc; margin-bottom: 10px; }
+.footer-social { display: flex; gap: 20px; font-size: 22px; margin-top: 15px; }
+.footer-social i { cursor: pointer; transition: 0.3s; color: #ffffff; }
+.footer-social i:hover { color: #25D366; }
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border: 1px solid #eee;
+    }
+    .nav ul.active { display: flex; }
+    .menu-toggle { display: block; }
+    .detalhe-box, .detalhe-box.reverse {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 15px;
+    }
+    .detalhe-box img { max-width: 100%; margin: 0 auto; }
+    .footer-container { text-align: center; flex-direction: column; align-items: center; }
+    .footer-col { text-align: center; }
+    .footer-social { justify-content: center; }
+    
+    /* 🔥 AJUSTE CIRÚRGICO MOBILE: Altura automática para não cortar a imagem */
+    .banner-segmentos { height: auto; } 
+    .banner-segmentos img { 
+        animation: none; 
+        transform: scale(1); 
+        object-fit: contain; /* Garante que a imagem inteira apareça sem cortes */
+    } 
+}
